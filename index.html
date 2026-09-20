@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CLASS 8G NGL — Admin</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <main class="container">
+
+    <header class="header">
+      <div>
+        <p class="label">ADMIN DASHBOARD</p>
+        <h1>CLASS 8G NGL</h1>
+        <p class="subtitle">Kelola pesan anonim kelas 8G</p>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        LIVE
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-label">TOTAL PESAN</span>
+        <strong id="totalMessages">0</strong>
+      </div>
+    </section>
+
+    <section class="messages-section">
+
+      <div class="section-title">
+        <div>
+          <h2>Pesan Masuk</h2>
+          <p>Pesan terbaru akan muncul otomatis.</p>
+        </div>
+      </div>
+
+      <div id="loading" class="state">
+        Memuat pesan...
+      </div>
+
+      <div id="error" class="state error hidden">
+        Gagal memuat pesan.
+      </div>
+
+      <div id="empty" class="state hidden">
+        Belum ada pesan.
+      </div>
+
+      <div id="messages"></div>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
