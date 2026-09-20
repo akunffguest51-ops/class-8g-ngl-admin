@@ -11,56 +11,169 @@
 
 <body>
 
-  <div class="background"></div>
+  <!-- =========================
+       LOGIN
+  ========================== -->
 
-  <main class="container">
+  <div id="loginScreen" class="login-screen">
 
-    <header class="header">
-      <div>
-        <p class="label">ADMIN DASHBOARD</p>
-        <h1>CLASS 8G NGL</h1>
-        <p class="subtitle">Kelola pesan anonim kelas 8G</p>
+    <div class="login-box">
+
+      <div class="login-logo">
+        8G
       </div>
 
-      <div class="status">
-        <span class="status-dot"></span>
-        LIVE
-      </div>
-    </header>
+      <p class="login-label">
+        PRIVATE ADMIN PANEL
+      </p>
 
-    <section class="stats">
-      <div class="stat-card">
-        <span class="stat-label">TOTAL PESAN</span>
-        <strong id="totalMessages">0</strong>
-      </div>
-    </section>
+      <h1>
+        CLASS 8G NGL
+      </h1>
 
-    <section class="messages-section">
+      <p class="login-subtitle">
+        Masukkan admin key untuk melanjutkan.
+      </p>
 
-      <div class="section-title">
+      <input
+        id="adminKey"
+        type="password"
+        placeholder="Admin Key"
+        autocomplete="off"
+      >
+
+      <button id="loginButton">
+        LOGIN
+      </button>
+
+      <p id="loginError" class="login-error hidden">
+        Admin key salah.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       DASHBOARD
+  ========================== -->
+
+  <div id="dashboard" class="dashboard hidden">
+
+    <div class="container">
+
+      <!-- HEADER -->
+
+      <header class="header">
+
         <div>
-          <h2>Pesan Masuk</h2>
-          <p>Pesan terbaru akan muncul otomatis.</p>
+
+          <p class="label">
+            ADMIN DASHBOARD
+          </p>
+
+          <h1>
+            CLASS 8G NGL
+          </h1>
+
+          <p class="subtitle">
+            Kelola pesan anonim kelas 8G
+          </p>
+
         </div>
-      </div>
 
-      <div id="loading" class="state">
-        Memuat pesan...
-      </div>
+        <div class="header-actions">
 
-      <div id="error" class="state error hidden">
-        Gagal memuat pesan.
-      </div>
+          <div class="status">
+            <span class="status-dot"></span>
+            LIVE
+          </div>
 
-      <div id="empty" class="state hidden">
-        Belum ada pesan.
-      </div>
+          <button
+            id="logoutButton"
+            class="logout-btn"
+          >
+            Logout
+          </button>
 
-      <div id="messages"></div>
+        </div>
 
-    </section>
+      </header>
 
-  </main>
+
+      <!-- STAT -->
+
+      <section class="stats">
+
+        <div class="stat-card">
+
+          <span class="stat-label">
+            TOTAL PESAN
+          </span>
+
+          <strong id="totalMessages">
+            0
+          </strong>
+
+        </div>
+
+      </section>
+
+
+      <!-- MESSAGES -->
+
+      <section class="messages-section">
+
+        <div class="section-title">
+
+          <div>
+
+            <h2>
+              Pesan Masuk
+            </h2>
+
+            <p>
+              Pesan terbaru akan muncul otomatis.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="loading"
+          class="state"
+        >
+          Memuat pesan...
+        </div>
+
+
+        <div
+          id="error"
+          class="state error hidden"
+        >
+          Gagal memuat pesan.
+        </div>
+
+
+        <div
+          id="empty"
+          class="state hidden"
+        >
+          Belum ada pesan.
+        </div>
+
+
+        <div id="messages"></div>
+
+      </section>
+
+    </div>
+
+  </div>
+
 
   <script type="module" src="app.js"></script>
 
